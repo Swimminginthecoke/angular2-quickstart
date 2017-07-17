@@ -6,7 +6,7 @@
 git
 npm
 node.js
-npm i -g typescript
+npm typescript
 ```
 
 ## Setting up
