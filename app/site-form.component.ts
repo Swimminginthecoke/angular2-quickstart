@@ -15,4 +15,11 @@ export class SiteFormComponent {
     onSubmit() { this. Submited = true; }
 
     get diagnostic() { return JSON.stringify(this.model); }
+
+    active = true;
+    newSite() {
+        this.model = new Site(5, "", "");
+        this.active = false;
+        setTimeout(() => this.active = true, 0);
+    }
 }

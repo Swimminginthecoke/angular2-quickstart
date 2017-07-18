@@ -13,6 +13,7 @@ var SiteFormComponent = (function () {
         this.urls = ["www.github.com", "www.stackoverflow.com", "www.facebook.com", "www.taobao.com"];
         this.model = new site_1.Site(1, "test", this.urls[0], 10000);
         this.Submited = false;
+        this.active = true;
     }
     SiteFormComponent.prototype.onSubmit = function () { this.Submited = true; };
     Object.defineProperty(SiteFormComponent.prototype, "diagnostic", {
@@ -20,6 +21,12 @@ var SiteFormComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    SiteFormComponent.prototype.newSite = function () {
+        var _this = this;
+        this.model = new site_1.Site(5, "", "");
+        this.active = false;
+        setTimeout(function () { return _this.active = true; }, 0);
+    };
     return SiteFormComponent;
 }());
 SiteFormComponent = __decorate([
